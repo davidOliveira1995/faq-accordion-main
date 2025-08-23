@@ -34,12 +34,22 @@ body {
 
   font-size: 16px;
   font-family: var(--font-family-work-sans);
-  background: linear-gradient(to top, var(--Purple-100) 70%, var(--Purple-950) 20%);
+  background: linear-gradient(
+    to top,
+    var(--Purple-100) 70%,
+    var(--Purple-950) 20%
+  );
 }
 
 /* ---------------------------------- */
 /* 4. Layout */
 /* ---------------------------------- */
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 .attribution {
   font-size: 11px;
@@ -53,27 +63,88 @@ body {
 /* ---------------------------------- */
 
 .card {
-  width: 100%;
-  max-width: 350px;
   background-color: var(--White);
   padding: 20px;
+  border-radius: 10px;
+}
+
+.card-title {
+  color: var(--Purple-950);
+}
+
+.icon-star {
+  width: 22px;
+  margin-right: 20px;
 }
 
 .faq-question {
-  color: var(--Purple-900);
+  margin: 20px 0;
+  color: var(--Purple-950);
   font-weight: 600;
 }
 
 .faq-answer {
   color: var(--Purple-600);
   line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* texto à esquerda, ícone à direita */
+}
+
+summary::-webkit-details-marker {
+  display: none; /* remove a seta padrão */
+}
+
+/* Ícone quando fechado */
+summary::after {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  background: url("/assets/images/icon-plus.svg") no-repeat center center;
+  background-size: contain;
+}
+
+/* Ícone quando aberto */
+details[open] summary::after {
+  background-image: url("/assets/images/icon-minus.svg");
+}
+
+hr {
+  border: 1px solid var(--Purple-100);
 }
 /* ---------------------------------- */
-/* 6. Media Queries */
+/* 6. Utilitários */
+/* ---------------------------------- */
+
+
+/* ---------------------------------- */
+/* 7. Media Queries */
 /* ---------------------------------- */
 
 @media (max-width: 375px) {
+  .card {
+    width: 350px;
+    max-width: 100%;
+  }
+
   .attribution {
     display: none;
+  }
+
+}
+
+@media (min-width: 600px) {
+  .card {
+    width: 600px;
+    max-width: 100%;
   }
 }
