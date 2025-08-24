@@ -34,11 +34,9 @@ body {
 
   font-size: 16px;
   font-family: var(--font-family-work-sans);
-  background: linear-gradient(
-    to top,
-    var(--Purple-100) 70%,
-    var(--Purple-950) 20%
-  );
+  background-image: url("/assets/images/background-pattern-desktop.svg"),
+    linear-gradient(to top, var(--Purple-100) 65%, var(--Purple-950) 60%);
+  background-repeat: no-repeat;
 }
 
 /* ---------------------------------- */
@@ -52,11 +50,18 @@ body {
 }
 
 .attribution {
-  font-size: 11px;
+  margin-top: 100px;
+  padding: 5px;
+  font-size: 1rem;
   text-align: center;
+  border: 2px solid purple;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--Purple-950);
+}
+
+.attribution a:hover {
+  color: purple;
 }
 /* ---------------------------------- */
 /* 5. Componentes */
@@ -81,6 +86,14 @@ body {
   margin: 20px 0;
   color: var(--Purple-950);
   font-weight: 600;
+}
+
+.faq-question span {
+  padding-right: 60px;
+}
+
+.faq-question p {
+  padding-right: 10px;
 }
 
 .faq-answer {
@@ -125,12 +138,11 @@ hr {
 /* 6. Utilitários */
 /* ---------------------------------- */
 
-
 /* ---------------------------------- */
 /* 7. Media Queries */
 /* ---------------------------------- */
 
-@media (max-width: 375px) {
+@media (max-width: 414px) {
   .card {
     width: 350px;
     max-width: 100%;
@@ -140,9 +152,21 @@ hr {
     display: none;
   }
 
+  body {
+    background-image: url("/assets/images/background-pattern-mobile.svg"),
+      linear-gradient(to top, var(--Purple-100) 70%, var(--Purple-950) 60%);
+    background-repeat: no-repeat;
+  }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 376px) and (max-width: 430px) {
+  .card {
+    width: 380px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1440px) {
   .card {
     width: 600px;
     max-width: 100%;
