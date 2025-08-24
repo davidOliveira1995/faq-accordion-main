@@ -35,8 +35,10 @@ body {
   font-size: 16px;
   font-family: var(--font-family-work-sans);
   background-image: url("../assets/images/background-pattern-desktop.svg"),
-    linear-gradient(to top, var(--Purple-100) 65%, var(--Purple-950) 60%);
+    linear-gradient(to top, var(--Purple-100) 70%, var(--Purple-950) 60%);
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
 }
 
 /* ---------------------------------- */
@@ -50,11 +52,9 @@ body {
 }
 
 .attribution {
-  margin-top: 100px;
-  padding: 5px;
+  margin-top: 30px;
   font-size: 1rem;
   text-align: center;
-  border: 2px solid purple;
 }
 .attribution a {
   color: var(--Purple-950);
@@ -151,15 +151,10 @@ hr {
 
   body {
     background-image: url("../assets/images/background-pattern-mobile.svg"),
-      linear-gradient(to top, var(--Purple-100) 70%, var(--Purple-950) 60%);
+      linear-gradient(to top, var(--Purple-100) 60%, var(--Purple-950) 60%);
     background-repeat: no-repeat;
-  }
-}
-
-@media (min-width: 376px) and (max-width: 430px) {
-  .card {
-    width: 380px;
-    max-width: 100%;
+    background-size: contain;
+    background-position: top center;
   }
 }
 
