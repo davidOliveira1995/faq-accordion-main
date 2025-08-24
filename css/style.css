@@ -71,6 +71,7 @@ body {
   background-color: var(--White);
   padding: 20px;
   border-radius: 10px;
+  box-shadow: 5px 3px 50px 0px var(--Purple-600);
 }
 
 .card-title {
