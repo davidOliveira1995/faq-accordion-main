@@ -10,7 +10,8 @@ This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://w
 
 ---
 
-![](assets/images/screen-desktop-stats.png)
+📱 Mobile preview
+![](assets/images/screen-mobile.png)
 
 ### 🔗 Links
 
