@@ -34,7 +34,7 @@ body {
 
   font-size: 16px;
   font-family: var(--font-family-work-sans);
-  background-image: url("assets/images/background-pattern-desktop.svg"),
+  background-image: url("../assets/images/background-pattern-desktop.svg"),
     linear-gradient(to top, var(--Purple-100) 65%, var(--Purple-950) 60%);
   background-repeat: no-repeat;
 }
@@ -122,13 +122,13 @@ summary::after {
   width: 25px;
   height: 25px;
   flex-shrink: 0;
-  background: url("assets/images/icon-plus.svg") no-repeat center center;
+  background: url("../assets/images/icon-plus.svg") no-repeat center center;
   background-size: contain;
 }
 
 /* Ícone quando aberto */
 details[open] summary::after {
-  background-image: url("assets/images/icon-minus.svg");
+  background-image: url("../assets/images/icon-minus.svg");
 }
 
 hr {
@@ -150,7 +150,7 @@ hr {
   }
 
   body {
-    background-image: url("/assets/images/background-pattern-mobile.svg"),
+    background-image: url("../assets/images/background-pattern-mobile.svg"),
       linear-gradient(to top, var(--Purple-100) 70%, var(--Purple-950) 60%);
     background-repeat: no-repeat;
   }
